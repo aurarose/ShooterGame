@@ -1,4 +1,5 @@
 // MY_CUSTOM_CODE
+// A pickup which applies a gameplay effect to the character who picked it up
 
 #include "ShooterGame.h"
 #include "ShooterPickup_GameplayEffect.h"

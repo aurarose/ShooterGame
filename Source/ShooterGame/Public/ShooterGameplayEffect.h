@@ -1,10 +1,10 @@
-// Fill out your copyright notice in the Description page of Project Settings.
+// MY_CUSTOM_CODE
+// A base class for an effect which attaches to an actor and lasts a certain amount of time
 
 #pragma once
 
 #include "Components/ActorComponent.h"
 #include "ShooterGameplayEffect.generated.h"
-
 
 UCLASS(Abstract, Blueprintable)
 class SHOOTERGAME_API UShooterGameplayEffect : public UActorComponent
@@ -26,3 +26,4 @@ protected:
 	UPROPERTY(EditDefaultsOnly, Category = Duration)
 	float EffectDuration;
 };
+// MY_CUSTOM_CODE

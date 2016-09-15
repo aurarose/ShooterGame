@@ -1,4 +1,5 @@
 // MY_CUSTOM_CODE
+// An effect which causes the owner to burst in flames periodically
 
 #include "ShooterGame.h"
 #include "ShooterGameplayEffect_Explosive.h"
@@ -7,10 +8,6 @@
 // Sets default values for this component's properties
 UShooterGameplayEffect_Explosive::UShooterGameplayEffect_Explosive(const FObjectInitializer& ObjectInitializer) : Super(ObjectInitializer)
 {
-	// Set this component to be initialized when the game starts, and to be ticked every frame.  You can turn these features
-	// off to improve performance if you don't need them.
-	// ...
-
 }
 
 // Called when the game starts
@@ -18,9 +15,6 @@ void UShooterGameplayEffect_Explosive::BeginPlay()
 {
 	Super::BeginPlay();
 	LastExploded = GetWorld()->GetTimeSeconds();
-
-	// ...
-
 }
 
 // Called every frame
@@ -39,7 +33,7 @@ void UShooterGameplayEffect_Explosive::TickComponent(float DeltaTime, ELevelTick
 
 void UShooterGameplayEffect_Explosive::Explode()
 {
-	// effects and damage origin shouldn't be placed inside mesh at impact point
+	// From Shooter Projectile
 	AActor* Owner = GetOwner();
 	APawn* Instigator = Cast<APawn>(Owner);
 	TWeakObjectPtr<AController> Controller = Instigator ? Instigator->Controller : NULL;
@@ -59,5 +53,6 @@ void UShooterGameplayEffect_Explosive::Explode()
 			UGameplayStatics::FinishSpawningActor(EffectActor, SpawnTransform);
 		}
 	}
+	//
 }
 // MY_CUSTOM_CODE

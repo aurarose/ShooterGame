@@ -1,4 +1,5 @@
 // MY_CUSTOM_CODE
+// An extension of projectile movement which allows for movement towards the player's cursor
 
 #pragma once
 
@@ -10,8 +11,6 @@ UCLASS( ClassGroup=Movement, meta=(BlueprintSpawnableComponent) )
 class SHOOTERGAME_API USteeredProjectileMovement : public UProjectileMovementComponent
 {
 	GENERATED_BODY()
-
-	
 
 public:
 	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = Steering)

@@ -1,5 +1,4 @@
 // MY_CUSTOM_CODE
-// Base class for abilities
 
 #include "ShooterGame.h"
 #include "ShooterAbility.h"
@@ -8,6 +7,7 @@ AShooterAbility::AShooterAbility(const FObjectInitializer& ObjectInitializer) : 
 {
 }
 
+// Initialize
 void AShooterAbility::PostInitializeComponents()
 {
 	Super::PostInitializeComponents();
@@ -19,6 +19,7 @@ void AShooterAbility::Destroyed()
 	Super::Destroyed();
 }
 
+// If it can activate, set its cooldown
 void AShooterAbility::Activate() 
 {
 	if (CanActivate()) 
@@ -32,7 +33,9 @@ void AShooterAbility::Activate()
 		
 }
 
+// See if ability can activate
 bool AShooterAbility::CanActivate()
 {
 	return GetWorld()->GetTimeSeconds() > TimeLastActivated + CooldownTime;
 }
+// MY_CUSTOM_CODE

@@ -4,10 +4,6 @@
 
 #include "ShooterAbility.generated.h"
 
-/**
-*	Base class for gameplay abilities.
-*/
-
 UCLASS(Abstract, Blueprintable)
 class AShooterAbility : public AActor
 {
@@ -28,3 +24,4 @@ protected:
 	float CooldownTime;
 	float TimeLastActivated;
 };
+// MY_CUSTOM_CODE

@@ -1,4 +1,5 @@
-// Fill out your copyright notice in the Description page of Project Settings.
+// MY_CUSTOM_CODE
+// A component which allows an actor to use an ability
 
 #pragma once
 
@@ -25,3 +26,4 @@ private:
 	void InitializeAbility();
 		
 };
+// MY_CUSTOM_CODE

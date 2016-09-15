@@ -43,6 +43,7 @@ bool AShooterAbility_Switcharoo::CanActivate()
 	return false;
 }
 
+// Linetrace salvaged from ShooterWeapon_Instant
 FHitResult AShooterAbility_Switcharoo::Raycast()
 {
 	AActor* Actor = GetOwner();
@@ -62,3 +63,5 @@ FHitResult AShooterAbility_Switcharoo::Raycast()
 	GetWorld()->LineTraceSingleByChannel(Hit, StartTrace, EndTrace, COLLISION_WEAPON, TraceParams);
 	return Hit;
 }
+// Linetrace salvaged from ShooterWeapon_Instant
+// MY_CUSTOM_CODE

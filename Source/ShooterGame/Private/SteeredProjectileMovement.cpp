@@ -1,8 +1,8 @@
-// Fill out your copyright notice in the Description page of Project Settings.
+// MY_CUSTOM_CODE
+// An extension of projectile movement which allows for movement towards the player's cursor
 
 #include "ShooterGame.h"
 #include "SteeredProjectileMovement.h"
-
 
 // Sets default values for this component's properties
 USteeredProjectileMovement::USteeredProjectileMovement()
@@ -11,8 +11,6 @@ USteeredProjectileMovement::USteeredProjectileMovement()
 	// off to improve performance if you don't need them.
 	bWantsBeginPlay = true;
 	PrimaryComponentTick.bCanEverTick = true;
-
-	// ...
 }
 
 FVector USteeredProjectileMovement::ComputeAcceleration(const FVector& InVelocity, float DeltaTime) const
@@ -25,13 +23,12 @@ FVector USteeredProjectileMovement::ComputeAcceleration(const FVector& InVelocit
 	{
 		Acceleration += ComputeHomingAcceleration(InVelocity, DeltaTime);
 	}
-	// MY_CUSTOM_CODE
+
 	// Don't do both homing and steering
 	else if (bIsSteeredProjectile)
 	{
 		Acceleration += ComputeSteeringAcceleration(InVelocity, DeltaTime);
 	}
-	// MY_CUSTOM_CODE
 
 	return Acceleration;
 }
@@ -62,9 +59,6 @@ FVector USteeredProjectileMovement::ComputeSteeringAcceleration(const FVector& I
 void USteeredProjectileMovement::BeginPlay()
 {
 	Super::BeginPlay();
-
-	// ...
-	
 }
 
 
@@ -75,4 +69,4 @@ void USteeredProjectileMovement::TickComponent( float DeltaTime, ELevelTick Tick
 
 	// ...
 }
-
+// MY_CUSTOM_CODE

@@ -1,4 +1,5 @@
-// Fill out your copyright notice in the Description page of Project Settings.
+// MY_CUSTOM_CODE
+// An effect which causes the owner to burst in flames periodically
 
 #pragma once
 
@@ -38,3 +39,4 @@ private:
 		
 	
 };
+// MY_CUSTOM_CODE

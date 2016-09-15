@@ -1,5 +1,5 @@
 // MY_CUSTOM_CODE
-// Component that allows a 
+// A component which allows an actor to use an ability
 
 #include "ShooterGame.h"
 #include "ShooterAbilityUser.h"
@@ -15,7 +15,6 @@ UShooterAbilityUser::UShooterAbilityUser(const FObjectInitializer& ObjectInitial
 	
 	
 	UInputComponent::BindAction("UseAbility", IE_Pressed, this, &UShooterAbilityUser::OnUseAbility);
-	// ...
 }
 
 void UShooterAbilityUser::InitializeAbility()
@@ -40,3 +39,4 @@ void UShooterAbilityUser::OnUseAbility()
 		UShooterAbilityUser::AbilityRef->Activate();
 	}
 }
+// MY_CUSTOM_CODE
